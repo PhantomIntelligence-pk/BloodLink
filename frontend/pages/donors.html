@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Donors</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+<h2>Search Blood Donors 🔍</h2>
+
+<!-- INPUTS -->
+<input type="text" id="city" placeholder="Enter City">
+
+<select id="blood">
+    <option value="A_POS">A+</option>
+    <option value="B_POS">B+</option>
+    <option value="O_POS">O+</option>
+    <option value="AB_POS">AB+</option>
+</select>
+
+<!-- BUTTON -->
+<button onclick="searchDonors()">Search</button>
+
+<!-- RESULTS -->
+<div id="results"></div>
+
+<!-- JS -->
+<script src="../js/search.js"></script>
+<script src="../js/api.js"></script>
+
+</body>
+</html>

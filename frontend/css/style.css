@@ -1,0 +1,320 @@
+body{
+    margin:0;
+    padding:0;
+    font-family:Arial;
+    background:linear-gradient(135deg,#ff4d6d,#c9184a);
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/* MAIN APP BOX */
+#app,
+.home{
+    background:white;
+    width:360px;
+    padding:25px;
+    border-radius:18px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,0.2);
+    animation:fadeIn 0.5s ease;
+    position:relative;
+    z-index:2;
+}
+
+/* FORCE HOME TEXT BLACK */
+.home,
+.home *{
+    color:#111 !important;
+}
+
+/* HEADINGS */
+h1,h2{
+    margin-bottom:15px;
+    color:#111;
+}
+
+/* PARAGRAPH */
+p{
+    color:gray;
+}
+
+/* INPUTS */
+input, select{
+    width:100%;
+    padding:10px;
+    margin-top:10px;
+    border:1px solid #ddd;
+    border-radius:10px;
+    outline:none;
+}
+
+/* BUTTONS */
+button{
+    width:100%;
+    padding:12px;
+    margin-top:12px;
+    border:none;
+    border-radius:10px;
+    background:#e63946;
+    color:white;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#c9184a;
+    transform:scale(1.03);
+}
+
+/* BLOOD GROUP GRID */
+.blood-group{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+    margin-top:15px;
+}
+
+.blood-group button{
+    background:#ff4d6d;
+}
+
+/* GENDER */
+.gender-container{
+    display:flex;
+    gap:10px;
+    margin-top:15px;
+}
+
+.gender-card{
+    flex:1;
+    background:#fff0f3;
+    border-radius:12px;
+    padding:10px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.gender-card:hover{
+    transform:scale(1.05);
+}
+
+.gender-card img{
+    width:100%;
+    height:100px;
+    object-fit:contain;
+}
+
+/* CARD DESIGN */
+.card{
+    background:#fff;
+    padding:15px;
+    margin-top:12px;
+    border-radius:14px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    text-align:left;
+    position:relative;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-4px);
+}
+
+/* BLOOD BADGE */
+.blood-badge{
+    position:absolute;
+    top:10px;
+    right:10px;
+    background:#e63946;
+    color:white;
+    padding:5px 10px;
+    border-radius:20px;
+    font-size:12px;
+}
+
+/* CITY TEXT */
+.city{
+    color:gray;
+    margin:6px 0;
+}
+
+/* CONTACT BUTTON */
+.contact-btn{
+    width:100%;
+    padding:10px;
+    border:none;
+    background:#2ecc71;
+    color:white;
+    border-radius:10px;
+    font-weight:bold;
+    cursor:pointer;
+    margin-top:10px;
+}
+
+.contact-btn:hover{
+    background:#27ae60;
+}
+
+/* RESULTS */
+#results{
+    margin-top:15px;
+}
+
+/* ANIMATION */
+@keyframes fadeIn{
+    from{opacity:0; transform:translateY(20px);}
+    to{opacity:1; transform:translateY(0);}
+}  
+
+/* BACKGROUND CIRCLES ONLY (SAFE ADDITION) */
+
+.circle1{
+    position:fixed;
+    width:220px;
+    height:220px;
+    background:rgba(255,255,255,0.08);
+    border-radius:50%;
+    top:-70px;
+    left:-70px;
+    z-index:0;
+}
+
+.circle2{
+    position:fixed;
+    width:180px;
+    height:180px;
+    background:rgba(255,255,255,0.08);
+    border-radius:50%;
+    bottom:-70px;
+    right:-70px;
+    z-index:0;
+}
+
+/* MOVING CIRCLES */
+.circle1, .circle2{
+    position:fixed;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:0;
+}
+
+/* BIG CIRCLE */
+.circle1{
+    width:250px;
+    height:250px;
+    top:-80px;
+    left:-80px;
+    animation:moveCircle1 12s linear infinite;
+}
+
+/* SMALL CIRCLE */
+.circle2{
+    width:180px;
+    height:180px;
+    bottom:-70px;
+    right:-70px;
+    animation:moveCircle2 15s linear infinite;
+}
+
+/* TEXT INSIDE CIRCLE */
+.circle1 span,
+.circle2 span{
+    font-size:14px;
+    font-weight:bold;
+    color:rgba(255,255,255,0.15);
+    white-space:nowrap;
+}
+
+/* MOVEMENT ANIMATION */
+/* FIXED BACKGROUND CIRCLES */
+
+
+/* FULL SCREEN MOVING CIRCLES */
+.circle1,
+.circle2{
+    position:fixed;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-weight:bold;
+    color:rgba(0,0,0,0.9);
+    text-shadow:
+    0 2px 4px rgba(0,0,0,0.4),
+    0 0 6px rgba(0,0,0,0.2);
+    font-weight:900;
+    font-size:14px;
+    letter-spacing:2px;
+    z-index:0;
+    pointer-events:none;
+}
+
+/* BIG CIRCLE */
+.circle1{
+    width:260px;
+    height:260px;
+    background:rgba(255,255,255,0.08);
+    top:0;
+    left:0;
+    animation:move1 12s linear infinite;
+}
+
+/* SMALL CIRCLE */
+.circle2{
+    width:200px;
+    height:200px;
+    background:rgba(255,255,255,0.06);
+    bottom:0;
+    right:0;
+    animation:move2 14s linear infinite;
+}
+
+/* MOVEMENT AROUND SCREEN */
+@keyframes move1{
+    0%   {transform:translate(0,0);}
+    25%  {transform:translate(70vw,10vh);}
+    50%  {transform:translate(70vw,70vh);}
+    75%  {transform:translate(10vw,70vh);}
+    100% {transform:translate(0,0);}
+}
+
+@keyframes move2{
+    0%   {transform:translate(0,0);}
+    25%  {transform:translate(-60vw,20vh);}
+    50%  {transform:translate(-60vw,-60vh);}
+    75%  {transform:translate(10vw,-60vh);}
+    100% {transform:translate(0,0);}
+}
+
+/* MAIN APP SAFE FRONT */
+.home{
+    position:relative;
+    z-index:2;
+}
+
+
+
+/* FORCE PURE VERTICAL LAYOUT */
+#app{
+    display:flex !important;
+    flex-direction:column !important;
+    align-items:stretch !important;
+    gap:12px;
+}
+
+/* EVERY ELEMENT FULL WIDTH */
+#app > *{
+    width:100% !important;
+    display:block;
+}
+
+/* REMOVE INLINE LOOK */
+h1, h2, p{
+    margin:0;
+    padding:0;
+}
